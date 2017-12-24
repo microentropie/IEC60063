@@ -1,0 +1,9 @@
+#######################################
+# Data types (KEYWORD1)
+#######################################
+E6Value  KEYWORD1
+E6FormattedValue KEYWORD1
+E12Value  KEYWORD1
+E12FormattedValue KEYWORD1
+E24Value  KEYWORD1
+E24FormattedValue KEYWORD1
