@@ -9,7 +9,7 @@ Arduino library.
 Given a value returns the E-series nearest value.
 Example 123 ohm nearest E24 value is 120R.
 Standard values for R, L and C are defined by [IEC60063](https://en.wikipedia.org/wiki/E-series_of_preferred_numbers)
-This library currently implements E6, E12 and E24.
+This library currently implements E3, E6, E12 and E24.
 Code is Arduino-portable so should work in any Arduino compatible platform.
 Tested on Arduino Uno and ESP8266.
 
