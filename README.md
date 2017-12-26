@@ -5,6 +5,7 @@ IEC60063
 * Copyright (C) 2017 Stefano Di Paolo.
 * Released under the MIT license.
 
+Arduino library.
 Given a value returns the E-series nearest value.
 Example 123 ohm nearest E24 value is 120R.
 Standard values for R, L and C are defined by [IEC60063](https://en.wikipedia.org/wiki/E-series_of_preferred_numbers)
@@ -29,60 +30,26 @@ Library contains this example:
 
 Documentation
 -------------
-**float E6Value(float r);**
-given a non standard value, returns the nearest E6 value as a float number.
+Please change Exx with the relevant serie:
+**float ExxValue(float r);**
+given a non standard value, returns the nearest Exx value as a float number.
 Example:
 ```C++
-float rE6 = E6Value(123);
+#include <IEC60063_Exx.h>
+float rE = ExxValue(123);
 ```
 
 
-**`char *E6FormattedValue(char *buf, int len, float r, char unitTypeChar = 'R');`**
-given a non standard value, returns the nearest E6 value as a string.
+Please change Exx with the relevant serie:
+**`char *ExxFormattedValue(char *buf, int len, float r, char unitTypeChar = 'R');`**
+given a non standard value, returns the nearest Exx value as a string.
 Example:
 ```C++
-char buf[E6BufSize];
+#include <IEC60063_Exx.h>
+char buf[ExxBufSize];
 
-Serial.print(E6FormattedValue(buf, sizeof(buf), 123, 'R')); 
+Serial.print(ExxFormattedValue(buf, sizeof(buf), 123, 'R')); 
 // sends "100R" to serial
-```
-
-
-**`float E12Value(float r);`**
-given a non standard value, returns the nearest E12 value as a float number.
-Example:
-```C++
-float rE12 = E12Value(123);
-```
-
-
-**`char *E12FormattedValue(char *buf, int len, float r, char unitTypeChar = 'R');`**
-given a non standard value, returns the nearest E12 value as a string.
-Example:
-```C++
-char buf[E12BufSize];
-
-Serial.print(E12FormattedValue(buf, sizeof(buf), 123, 'R')); 
-// sends "120R" to serial
-```
-
-
-**`float E24Value(float r);`**
-given a non standard value, returns the nearest E24 value as a float number.
-Example:
-```C++
-float rE24 = E24Value(123);
-```
-
-
-**`char *E24FormattedValue(char *buf, int len, float r, char unitTypeChar = 'R');`**
-given a non standard value, returns the nearest E24 value as a string.
-Example:
-```C++
-char buf[E24BufSize];
-
-Serial.print(E24FormattedValue(buf, sizeof(buf), 123, 'R')); 
-// sends "120R" to serial
 ```
 
 
