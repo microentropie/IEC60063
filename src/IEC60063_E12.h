@@ -11,6 +11,6 @@ String E12FormattedValue(float r, char unitTypeChar = 'R')
   return String(E12FormattedValue(buf, sizeof(buf), r, unitTypeChar));
 }
 */
-char *E12FormattedValue(char *buf, int len, float r, char unitTypeChar = 'R');
+extern char *E12FormattedValue(char *buf, int len, float r, char unitTypeChar = 'R');
 
 #endif //_E12_H_
