@@ -2,7 +2,7 @@
 
 
 // E3 (>20%) IEC 60063
-#define E3size 6
+#define E3size 3
 static const byte E3[E3size + 1] = { 10, 22, 47, 100 };
 
 

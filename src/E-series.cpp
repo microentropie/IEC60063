@@ -1,4 +1,10 @@
+//#ifndef snprintf
+#define _USE_PSTRING_
+//#endif //snprintf
+
+#ifdef _USE_PSTRING_
 #include <PString.h>
+#endif //_USE_PSTRING_
 #include "pow10.h"
 
 #ifndef byte
@@ -89,10 +95,13 @@ char *EserieFormattedValue(char *buf, int len, const byte *Eserie, int serieSize
   if (decadeMultiplier == -2)
   {
     // example: R15
-    //snprintf(buf, len, "%c%d", multiplierCh, rE);
+#ifdef _USE_PSTRING_
     PString str(buf, len);
     str = multiplierCh;
     str += rE;
+#else
+    snprintf(buf, len, "%c%d", multiplierCh, rE);
+#endif //_USE_PSTRING_
     return buf;
   }
   if (decadeMultiplier == -1 || decadeMultiplier == 2 || decadeMultiplier == 5 || decadeMultiplier == 8)
@@ -100,30 +109,39 @@ char *EserieFormattedValue(char *buf, int len, const byte *Eserie, int serieSize
     rL = '0' + (rE / 10);
     rR = '0' + (rE % 10);
     // example: 1R2 or 1K2 or 1M2
-    //snprintf(buf, len, "%c%c%c", rL, multiplierCh, rR);
+#ifdef _USE_PSTRING_
     PString str(buf, len);
     str = rL;
     str += multiplierCh;
     str += rR;
+#else
+    snprintf(buf, len, "%c%c%c", rL, multiplierCh, rR);
+#endif //_USE_PSTRING_
     return buf;
   }
   else if (decadeMultiplier == 1 || decadeMultiplier == 4 || decadeMultiplier == 7)
   {
     // example: 120R or 120K or 120M
-    //snprintf(buf, len, "%d0%c", rE, multiplierCh);
+#ifdef _USE_PSTRING_
     PString str(buf, len);
     str = rE;
     str += "0";
     str += multiplierCh;
+#else
+    snprintf(buf, len, "%d0%c", rE, multiplierCh);
+#endif //_USE_PSTRING_
     return buf;
   }
   else
   {
     // example: 12R or 12K or 12M
-    //snprintf(buf, len, "%d%c", rE, multiplierCh);
+#ifdef _USE_PSTRING_
     PString str(buf, len);
     str = rE;
     str += multiplierCh;
+#else
+    snprintf(buf, len, "%d%c", rE, multiplierCh);
+#endif //_USE_PSTRING_
     return buf;
   }
 }
