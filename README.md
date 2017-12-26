@@ -49,7 +49,7 @@ Example:
 char buf[ExxBufSize];
 
 Serial.print(ExxFormattedValue(buf, sizeof(buf), 123, 'R')); 
-// sends "100R" to serial
+// sends "100R" to serial, if Exx is E6
 ```
 
 
