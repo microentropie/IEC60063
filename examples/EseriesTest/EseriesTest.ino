@@ -1,3 +1,4 @@
+#include <IEC60063_E3.h>
 #include <IEC60063_E6.h>
 #include <IEC60063_E12.h>
 #include <IEC60063_E24.h>
@@ -36,7 +37,9 @@ void setup()
   {
     Serial.print("R=");
     Serial.print(r[i]);
-    Serial.print(" => E6: ");
+    Serial.print(" => E3: ");
+    Serial.print(E3FormattedValue(buf, sizeof(buf), r[i], 'R'));
+    Serial.print(", => E6: ");
     Serial.print(E6FormattedValue(buf, sizeof(buf), r[i], 'R'));
     Serial.print(", E12: ");
     Serial.print(E12FormattedValue(buf, sizeof(buf), r[i], 'R'));
