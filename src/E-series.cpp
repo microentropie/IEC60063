@@ -20,7 +20,7 @@ Sources repository: https://github.com/microentropie/
 #endif //_DEBUG
 
 
-static void EserieValueFind(const unsigned short *Eserie, int serieSize, float r, int &rE, int &decadeMultiplier)
+void EserieValueFind(const unsigned short *Eserie, int serieSize, float r, int &rE, int &decadeMultiplier)
 {
   rE = decadeMultiplier = 0;
   if (r < 0.999E-12 || r > 100.1E6) // limit R (or C or L) from 1 pico to 100 Mega
