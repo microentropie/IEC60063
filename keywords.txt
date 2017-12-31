@@ -1,11 +1,27 @@
 #######################################
 # Data types (KEYWORD1)
 #######################################
-E3Value  KEYWORD1
-E3FormattedValue KEYWORD1
-E6Value  KEYWORD1
-E6FormattedValue KEYWORD1
+E3Value KEYWORD1
+E3FormattedValue  KEYWORD1
+E6Value KEYWORD1
+E6FormattedValue  KEYWORD1
 E12Value  KEYWORD1
 E12FormattedValue KEYWORD1
 E24Value  KEYWORD1
 E24FormattedValue KEYWORD1
+E48Value  KEYWORD1
+E48FormattedValue KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+E3Tolerance KEYWORD2
+E6Tolerance KEYWORD2
+E12Tolerance  KEYWORD2
+E24Tolerance  KEYWORD2
+E48Tolerance  KEYWORD2
+
+######################################
+# Constants (LITERAL1)
+#######################################
+EseriesBufSize  LITERAL1

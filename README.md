@@ -7,9 +7,9 @@ IEC60063
 
 Arduino library.
 Given a value returns the E-series nearest value.
-Example 123 ohm nearest E24 value is 120R.
+Example 123 ohm nearest E24 value is "120R".
 Standard values for R, L and C are defined by [IEC60063](https://en.wikipedia.org/wiki/E-series_of_preferred_numbers)
-This library currently implements E3, E6, E12 and E24.
+This library currently implements E3, E6, E12, E24 and E48.
 Code is Arduino-portable so should work in any Arduino compatible platform.
 Tested on Arduino Uno and ESP8266.
 
@@ -19,7 +19,7 @@ Requirements
 
 Installation
 ------------
-Download the ZIP archive (<https://github.com/microentropie/Arduino-Libraries/IEC60063.zip>)
+Download the ZIP archive (<https://github.com/microentropie/Arduino-Libraries> click on IEC60063.zip then click on the Download button)
 open the Arduino IDE and choose Sketch -> Include Library -> Add .ZIP Library... and select the downloaded file.
 
 Code Examples
@@ -37,6 +37,8 @@ Example:
 ```C++
 #include <IEC60063_Exx.h>
 float rE = ExxValue(123);
+Serial.print(rE); 
+// sends 100 to serial, if Exx is E6
 ```
 
 
