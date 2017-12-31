@@ -5,12 +5,12 @@ IEC60063
 * Copyright (C) 2017 Stefano Di Paolo.
 * Released under the MIT license.
 
-Arduino library.
-Given a value returns the E-series nearest value.
-Example 123 ohm nearest E24 value is "120R".
-Standard values for R, L and C are defined by [IEC60063](https://en.wikipedia.org/wiki/E-series_of_preferred_numbers)
-This library currently implements E3, E6, E12, E24 and E48.
-Code is Arduino-portable so should work in any Arduino compatible platform.
+Arduino library.<br>
+Given a value returns the E-series nearest value.<br>
+Example 123 ohm nearest E24 value is "120R".<br>
+Standard values for R, L and C are defined by [IEC60063](https://en.wikipedia.org/wiki/E-series_of_preferred_numbers).<br>
+This library currently implements E3, E6, E12, E24 and E48.<br>
+Code is Arduino-portable so should work in any Arduino compatible platform.<br>
 Tested on Arduino Uno and ESP8266.
 
 Requirements
@@ -30,10 +30,10 @@ Library contains this example:
 
 Documentation
 -------------
-Please change Exx with the relevant serie:
-**float ExxValue(float r);**
-given a non standard value, returns the nearest Exx value as a float number.
-Example:
+Please change Exx with the relevant serie:<br>
+**float ExxValue(float r);**<br>
+given a non standard value, returns the nearest Exx value as a float number.<br>
+Example:<br>
 ```C++
 #include <IEC60063_Exx.h>
 float rE = ExxValue(123);
@@ -42,10 +42,10 @@ Serial.print(rE);
 ```
 
 
-Please change Exx with the relevant serie:
-**`char *ExxFormattedValue(char *buf, int len, float r, char unitTypeChar = 'R');`**
-given a non standard value, returns the nearest Exx value as a string.
-Example:
+Please change Exx with the relevant serie:<br>
+**`char *ExxFormattedValue(char *buf, int len, float r, char unitTypeChar = 'R');`**<br>
+given a non standard value, returns the nearest Exx value as a string.<br>
+Example:<br>
 ```C++
 #include <IEC60063_Exx.h>
 char buf[ExxBufSize];
