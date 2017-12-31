@@ -12,7 +12,7 @@ Example: 23E-9 Farad nearest E12 value is "22n".<br>
 Standard values for R, L and C are defined by [IEC60063](https://en.wikipedia.org/wiki/E-series_of_preferred_numbers).<br>
 This library currently implements E3, E6, E12, E24 and E48.<br>
 Code is Arduino-portable so should work in any Arduino compatible platform.
-Tested on Arduino Uno and ESP8266.
+Tested on Arduino Uno, ESP8266 and ESP32.
 
 Installation
 ------------
