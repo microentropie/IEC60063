@@ -19,7 +19,7 @@ Requirements
 
 Installation
 ------------
-Download the ZIP archive (<https://github.com/microentropie/Arduino-Libraries> click on IEC60063.zip then click on the Download button)
+Download the ZIP archive (<https://github.com/microentropie/Arduino-Libraries> click on IEC60063.zip then click on the Download button)<br>
 open the Arduino IDE and choose Sketch -> Include Library -> Add .ZIP Library... and select the downloaded file.
 
 Code Examples
