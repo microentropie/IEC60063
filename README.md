@@ -2,7 +2,7 @@ IEC60063
 ========
 
 * Author: Stefano Di Paolo (<http://github.com/microentropie>)
-* Copyright (C) 2017 Stefano Di Paolo.
+* Copyright (C) 2017-2018 Stefano Di Paolo.
 * Released under the MIT license.
 
 Arduino library.<br>
@@ -12,7 +12,7 @@ Example: 23E-9 Farad nearest E12 value is "22n".<br>
 Standard values for R, L and C are defined by [IEC60063](https://en.wikipedia.org/wiki/E-series_of_preferred_numbers).<br>
 This library currently implements E3, E6, E12, E24 and E48.<br>
 Code is Arduino-portable so should work in any Arduino compatible platform.
-Tested on Arduino Uno, ESP8266 and ESP32.
+Tested on Arduino Uno, ESP8266, ESP32 and STM32 (BluePill).
 
 Installation
 ------------
