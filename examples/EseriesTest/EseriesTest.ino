@@ -27,6 +27,23 @@ Example: 123 ohm is '120R' in E12 serie.
  
 void setup()
 {
+#ifdef ARDUINO_ARCH_STM32F1
+  // trick to give user the time to open the Serial Monitor
+  //
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED off
+  // the USB port is not available immediately after reset or programming;
+  // approximatively 5 seconds are required
+  int qtSecondsDelay = 6;
+  for(int b = 0; b < (qtSecondsDelay << 1); ++b)
+  {
+    digitalWrite(LED_BUILTIN, (b & 1));
+    delay(500);
+  }
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED off
+#endif //ARDUINO_ARCH_STM32F1
+
   Serial.begin(74880);
   Serial.println();
   Serial.println();
