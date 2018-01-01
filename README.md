@@ -54,7 +54,7 @@ Serial.print(ExxFormattedValue(buf, sizeof(buf), 123, 'R'));
 
 License
 -------
-Copyright (c) 2017 by Stefano Di Paolo
+Copyright (c) 2017-2018 by Stefano Di Paolo
 The MIT License (MIT).
 A copy of the license is enclosed (see license file), or you can read it here:
 <https://en.wikipedia.org/wiki/MIT_License>
