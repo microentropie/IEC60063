@@ -1,7 +1,7 @@
 /*
 Author:  Stefano Di Paolo
 License: MIT, https://en.wikipedia.org/wiki/MIT_License
-Date:  2017-12-31
+Date:  2018-01-04
 
 Library: IEC60063 series resistors.
 
@@ -13,6 +13,8 @@ Sources repository: https://github.com/microentropie/
 #include <IEC60063_E12.h>
 #include <IEC60063_E24.h>
 #include <IEC60063_E48.h>
+#include <IEC60063_E96.h>
+#include <IEC60063_E192.h>
 
 /*
 Required Libraries:
@@ -101,6 +103,10 @@ void setup()
     Serial.print(E24FormattedValue(buf, sizeof(buf), r[i], 'R'));
     Serial.print(", E48: ");
     Serial.print(E48FormattedValue(buf, sizeof(buf), r[i], 'R'));
+    Serial.print(", E96: ");
+    Serial.print(E96FormattedValue(buf, sizeof(buf), r[i], 'R'));
+    Serial.print(", E192: ");
+    Serial.print(E192FormattedValue(buf, sizeof(buf), r[i], 'R'));
     Serial.println();
   }
 }
@@ -119,16 +125,16 @@ https://github.com/microentropie/IEC60063
 0.0000000242 => E12: 0.00 = "22n"
 0.000000000001 => E12: 0.00 = "1p0", E48: 1p00"
 
-R=0.000000000000 => E3: 0R, => E6: 0R, E12: 0R, E24: 0R, E48: 0R
-R=0.000000000001 => E3: 1p0, => E6: 1p0, E12: 1p0, E24: 1p0, E48: 1p00
-R=0.309999990463 => E3: R22, => E6: R33, E12: R33, E24: R30, E48: R316
-R=74.000000000000 => E3: 100R, => E6: 68R, E12: 68R, E24: 75R, E48: 75R0
-R=123.000000000000 => E3: 100R, => E6: 100R, E12: 120R, E24: 120R, E48: 121R
-R=1400.000000000000 => E3: 1K0, => E6: 1K5, E12: 1K5, E24: 1K5, E48: 1K40
-R=1050.000000000000 => E3: 1K0, => E6: 1K0, E12: 1K0, E24: 1K1, E48: 1K05
-R=1049.000000000000 => E3: 1K0, => E6: 1K0, E12: 1K0, E24: 1K1, E48: 1K05
-R=1098.000000000000 => E3: 1K0, => E6: 1K0, E12: 1K2, E24: 1K1, E48: 1K10
-R=172000.000000000000 => E3: 220K, => E6: 150K, E12: 180K, E24: 180K, E48: 169K
-R=100000000.000000000000 => E3: 100M, => E6: 100M, E12: 100M, E24: 100M, E48: 100M
+R=0.000000000000 => E3: 0R, => E6: 0R, E12: 0R, E24: 0R, E48: 0R, E96: 0R, E192: 0R
+R=0.000000000001 => E3: 1p0, => E6: 1p0, E12: 1p0, E24: 1p0, E48: 1p00, E96: 1p00, E192: 1p00
+R=0.309999990463 => E3: R22, => E6: R33, E12: R33, E24: R30, E48: R316, E96: R309, E192: R309
+R=74.000000000000 => E3: 100R, => E6: 68R, E12: 68R, E24: 75R, E48: 75R0, E96: 73R2, E192: 74R1
+R=123.000000000000 => E3: 100R, => E6: 100R, E12: 120R, E24: 120R, E48: 121R, E96: 124R, E192: 123R
+R=1400.000000000000 => E3: 1K0, => E6: 1K5, E12: 1K5, E24: 1K5, E48: 1K40, E96: 1K40, E192: 1K40
+R=1050.000000000000 => E3: 1K0, => E6: 1K0, E12: 1K0, E24: 1K1, E48: 1K05, E96: 1K05, E192: 1K05
+R=1049.000000000000 => E3: 1K0, => E6: 1K0, E12: 1K0, E24: 1K1, E48: 1K05, E96: 1K05, E192: 1K05
+R=1098.000000000000 => E3: 1K0, => E6: 1K0, E12: 1K2, E24: 1K1, E48: 1K10, E96: 1K10, E192: 1K10
+R=172000.000000000000 => E3: 220K, => E6: 150K, E12: 180K, E24: 180K, E48: 169K, E96: 174K, E192: 172K
+R=100000000.000000000000 => E3: 100M, => E6: 100M, E12: 100M, E24: 100M, E48: 100M, E96: 100M, E192: 100M
 */
 
